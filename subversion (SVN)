@@ -26,3 +26,46 @@ na máquina do desenvolvedor.
 haver tempo para corrigi-lo naquele dia e o build poderá ficar quebrado por um longo período.
 -Todo e qualquer backup de versões deve ser mantido no repositório, preferencialmente como uma tag.
 
+Termos e conceitos básicos
+
+Repositório:
+É o local aonde estão todos os arquivos do projeto. É armazenado no banco de dados do SVN.
+Working Copy:
+Uma cópia de trabalho local na qual o desenvolvedor atua. É criada sempre que é feito checkout de algum projeto.
+Checkout:
+Download de um projeto para a máquina local, de modo que seus arquivos estejam ligados ao SVN. O projeto que será feito
+o checkout deve existir no repositório.
+Import:
+Envio dos arquivos de um novo projeto para o repositório. Após o import, obrigatoriamente um checkout deve ser feito 
+para que a working copy seja ligada ao SVN.
+Export:
+Ato de adquirir um projeto do repositório sem vinculação ao SVN.
+Commit:
+Ato de envio das modificações realizadas localmente para o servidor SVN.
+Update:
+Ato de obtenção das atualizações presentes do servidor SVN, atualizando a cópia local
+Revision:
+Número que identifica cada uma das alterações ou conjunto de alterações realizadas em um repositório. 
+Esse número é obtido a partir de uma sequência que é compartilhada por todos os diretórios do repositório.
+HEAD:
+É a revisão mais recente do repositório
+
+Diretórios especiais:
+
+trunk: armazena a versão funcional mais recente de desenvolvimento.
+branches: armazena versões de desenvolvimento paralelo de origem do trunk, porém isoladas deste. Deve ser utilizado  
+quando uma implementação traz o risco de afetar a integridade do trunk.
+tags: armazena etiquetas para facilitar a localização de revisões. Cada etiqueta possui um nome único que a identifica,
+sendo criada como um diretório, sempre através do trunk.
+Branch/Tag
+Refere-se à geração de branches ou tags a partir de um trunk ou geração de um branch a partir de uma tag ou outro branch.
+Merge
+Refere-se à junção de revisões entre os diretórios especiais. Sempre deve ser realizada com a working copy apontando 
+para o destino do merge.
+Switch
+Alteração do repositório utilizado por uma working copy. É realizada uma atualização ou junção dos arquivos para 
+assegurar que a working copy contenha exatamente o conteúdo do novo repositório mais quaisquer alterações locais.
+Relocate
+Realocação do endereço de um repositório. Apenas atualiza o endereço, sem realizar nenhum tipo de atualização nos 
+arquivos.
+
